@@ -10,15 +10,14 @@ def check_if_string_is_palindrome(word_string):
 
 def print_cipher_product_or_palindrome(word_string):
     if check_if_string_is_palindrome(word_string):
-        print("palindrome")
+        print("Palindrome")
     else:
         product = 1
         for c in word_string:
             product *= convert_char_to_julius_cipher_value(c)
-        print(product)
+        print(f"{product}".strip())
 
 
-if __name__ == "__main__":
-    no_of_inputs = int(input())
-    inputs = [input() for _ in range(no_of_inputs)]
-    [print_cipher_product_or_palindrome(i) for i in inputs]
+no_of_inputs = int(input())
+inputs = [input() for _ in range(no_of_inputs)]
+[print_cipher_product_or_palindrome(i) for i in inputs]
